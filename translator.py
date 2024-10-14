@@ -133,3 +133,15 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def save_and_play_tts(translated, target_lang):
+    output_file_path = os.path.join(os.path.expanduser("~"), "Desktop", "translation.mp3")
+    
+    # Remove existing file if it exists
+    if os.path.exists(output_file_path):
+        os.remove(output_file_path)
+    
+    tts = gTTS(translated, lang=target_lang)
+    tts.save(output_file_path)  # Save the TTS to Desktop
+    os.system(f'start {output_file_path}')  # Play the sound
+
