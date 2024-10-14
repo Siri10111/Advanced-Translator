@@ -89,7 +89,7 @@ input_text_box.pack(pady=5)
 target_lang_label = tk.Label(root, text="Select Target Language:", font=("Arial", 12), bg="#1e1e1e", fg="#ffffff")
 target_lang_label.pack(pady=5)
 
-languages = ["English", "Spanish", "French", "German", "Italian", "Chinese", "Japanese", "Portuguese", "Russian", "Arabic"]
+languages = ["en", "es", "fr", "de", "it", "zh", "ja", "pt", "ru", "ar"]
 target_lang_box = ttk.Combobox(root, values=languages, font=("Arial", 12), state="readonly")
 target_lang_box.pack(pady=5)
 
